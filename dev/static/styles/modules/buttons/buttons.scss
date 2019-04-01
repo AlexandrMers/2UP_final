@@ -1,0 +1,35 @@
+.button {
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0;
+    position: relative;
+    top: 0;
+    &:hover {
+        top: -3px;
+        box-shadow: 0 3px 10px 0 rgba($black, .5);
+        transition: all ease .3s;
+    }
+    &:active {
+        top: 0;
+        box-shadow: 0 0 0 0 rgba($black, .5);
+        transition: all ease .1s;
+    }
+   &_reset {
+       padding: 14px 63px;
+       border-radius: 100px;
+       background-color: #EBEAEA;
+       transition: all ease .3s;
+   }
+
+   &_add {
+       padding: 14px 130px;
+       border-radius: 100px;
+       background: #000;
+       background: linear-gradient(180deg, #48A8F6 0%, #4288FA 100%);
+       color: $white;
+   }
+   &_filter {
+       padding: 14px 114px;
+   }
+}

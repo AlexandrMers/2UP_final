@@ -1,0 +1,38 @@
+.add-resident.add-resident_filter
+    h2.add-resident__title Фильтр
+    form.add-resident__form(action="#" name="filter")
+
+        .add-resident__input-wrap.add-resident__input-wrap_radio
+            span.add-resident__text Пол
+            input#gender-male-filter.add-resident__radio(type="radio" name="gender-filter" value="мужской")
+            input#gender-female-filter.add-resident__radio(type="radio" name="gender-filter" value="женский")
+            .add-resident__radio-labels
+                label.add-resident__radio-label.add-resident__radio-label_male(for="gender-male-filter") Мужчина
+                label.add-resident__radio-label.add-resident__radio-label_female(for="gender-female-filter") Женщина
+
+        .add-resident__input-wrap
+            label.add-resident__label.add-resident__label_select
+                | Кол-во комнат
+                select#select-room-filter.add-residednt__input.add-residednt__input_select(name="select-room-filter")
+                    option(value="" selected disabled) Выбрать
+                    option(value="1") 1
+                    option(value="2") 2
+                    option(value="3") 3
+        
+        .add-resident__input-wrap.add-resident__input-wrap_additional
+            span.add-resident__text Дополнительно
+            .add-resident__checkbox-labels
+                input#check-pets-filter.add-resident__checkbox(type="checkbox" name="additional-filter" value="pets")
+                label(for="check-pets-filter").add-resident__label-check Домашние животные
+                input#check-tv-filter.add-resident__checkbox(type="checkbox" name="additional-filter" value="tv")
+                label(for="check-tv-filter").add-resident__label-check ТВ
+                input#check-internet-filter.add-resident__checkbox(type="checkbox" name="additional-filter" value="internet")
+                label(for="check-internet-filter").add-resident__label-check Интернет
+        
+        .add-resident__input-wrap
+            label.add-resident__label
+                | Этаж
+                input#count-floor-filter.add-residednt__input(type="number" name="floor-count-filter" min="1" max="5" placeholder="Введите")
+        
+        .add-resident__buttons.buttons_filter
+            button(type="reset")#btn-filter.button.button_reset.button_filter Сбросить

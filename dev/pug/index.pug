@@ -1,0 +1,10 @@
+extends template/main
+
+block variables
+	- var title = 'ЖК - от Винта'
+	- var pageClass = 'index-page'
+
+block content
+	.container
+		include modules/house-interactive
+		include modules/house-form

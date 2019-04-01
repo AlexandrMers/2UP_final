@@ -1,0 +1,54 @@
+.add-resident
+    h2.add-resident__title Добавить жителя
+    form#add-resident.add-resident__form(action="#" name="add-resident")
+
+        .add-resident__input-wrap
+            label.add-resident__label
+                | Имя
+                input#name.add-residednt__input(type="text" name="name" maxlength="15" required  title="только буквы")
+
+
+        .add-resident__input-wrap.add-resident__input-wrap_radio
+            span.add-resident__text Пол
+            input#gender-male.add-resident__radio(type="radio" name="gender" value="мужской" checked)
+            input#gender-female.add-resident__radio(type="radio" name="gender" value="женский")
+            .add-resident__radio-labels
+                label.add-resident__radio-label.add-resident__radio-label_male(for="gender-male") Мужчина
+                label.add-resident__radio-label.add-resident__radio-label_female(for="gender-female") Женщина
+        
+        .add-resident__input-wrap
+            label.add-resident__label
+                | Этаж
+                input#floor.add-residednt__input(type="number" name="floor-count" min="1" max="5" required)
+        
+        .add-resident__input-wrap
+            label.add-resident__label.add-resident__label_select
+                | Кол-во комнат
+                select#count-room.add-residednt__input.add-residednt__input_select(name="select-room" required)
+                    option(value="" selected disabled) Выбрать
+                    option(value="1") 1
+                    option(value="2") 2
+                    option(value="3") 3
+        
+        .add-resident__input-wrap.add-resident__input-wrap_additional
+            span.add-resident__text Дополнительно
+            .add-resident__checkbox-labels
+                input#check-pets.add-resident__checkbox(type="checkbox" name="additional" value="Домашние Животные")
+                label(for="check-pets").add-resident__label-check Домашние животные
+                input#check-tv.add-resident__checkbox(type="checkbox" name="additional" value="ТВ")
+                label(for="check-tv").add-resident__label-check ТВ
+                input#check-internet.add-resident__checkbox(type="checkbox" name="additional" value="Интернет")
+                label(for="check-internet").add-resident__label-check Интернет
+
+        .add-resident__input-wrap
+            label.add-resident__label.add-resident__label_select
+                | Сколько человек проживает
+                select#count-people.add-residednt__input.add-residednt__input_select(name="selectCountPeople" required)
+                    option(value="" selected disabled) Выбрать
+                    option(value="1") 1
+                    option(value="2") 2
+                    option(value="3") 3
+        
+        .add-resident__buttons
+            button(type="reset").button.button_reset Сбросить
+            button(type="submit")#button-form.button.button_add Добавить

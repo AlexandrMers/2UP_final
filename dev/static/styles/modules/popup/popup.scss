@@ -1,0 +1,101 @@
+.popup {
+   width: 100%;
+   padding-top: 24px;
+   padding-left: 35px;
+   padding-right: 35px;
+   overflow: hidden;
+   background: #FBFCFD;
+   box-shadow: 0px 24px 44px rgba(0, 0, 0, 0.1);
+   border-radius: 5px;
+   display: none;
+   &_visible {
+       display: block;
+   }
+}
+
+.hidden {
+    display: none;
+}
+
+.popup__header {
+    padding-bottom: 25px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: -50px;
+        width: 150%;
+        height: 1px;
+        background-color: #EAECF0;
+    }
+
+    .popup__title-name {
+        font-size: 24px;
+        font-weight: 700;
+    }
+    .popup__icon {
+        margin-left: 22px;
+        width: 23px;
+        height: 31px;
+        background-repeat: no-repeat;
+        background-size: 23px 31px;
+            background-position: center;
+        &_male {
+            background-image: url('../images/general/boy.svg');
+        }
+        &_female {
+            background-image: url('../images/general/girl.svg');
+        }
+    }
+
+    .popup-close {
+        margin-left: auto;
+        width: 19px;
+        height: 19px;
+        // outline: 2px solid black;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        position: relative;
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: -3px;
+            width: 25px;
+            height: 2px;
+            background-color: $black;
+        }
+        &::before {
+            transform: rotate(45deg);
+        }
+        &::after {
+            transform: rotate(-45deg);
+        }
+    }
+}
+
+.popup-main {
+    padding-top: 29px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 335px;
+    &__block {
+        // outline: 1px solid red;
+        margin-bottom: 40px;
+    }
+    &__criterion {
+        color: #A1BBCD;
+        margin-bottom: 10px;
+    }
+    &__info {
+        font-size: 20px;
+        font-weight: 700;
+        color: #333333;
+    }
+}

@@ -1,0 +1,16 @@
+.house-form__wrap
+    .house-form
+        input#choose-form.house-form__choose-input(type="checkbox" name="choose-form" )
+        h1.house-form__title ЖК от Винта
+        label.house-form__choose-label(for="choose-form")
+            span.house-form__text-left Добавить жителя
+            span.house-form__text-right Фильтр
+
+        .house-form__line
+            .house-form__slide.house-form__slide_one
+                include add-resident
+            .house-form__slide.house-form__slide_two
+                include filter
+    
+    include popup/popup.pug
+        
