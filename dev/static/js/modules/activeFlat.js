@@ -5,7 +5,7 @@
     const houseWindows = document.querySelectorAll( '.floor__window' );
     const countFloor = document.getElementById('floor');
     
-    function toClickHouse() {
+    function toClickHouse(event) {
         let target = event.target;
         let conditionFloor = target.classList.contains('house__floor');
         let conditionWindow = ( target.classList.contains('floor__window') && target.parentElement.classList.contains('house__floor') );
