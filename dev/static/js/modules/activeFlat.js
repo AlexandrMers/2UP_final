@@ -44,14 +44,24 @@
         const form = document.querySelector('.house-form');
         const switchTheme = document.querySelector('.house__form-wrap');
         const closePopup = document.querySelector('.popup-close');
+        
 
         if( element.classList.contains('active-male') || element.classList.contains('active-female') ) {
 
-            toInfoPopup.addInfo(element);
+            if( element.classList.contains('filter_none') ) {
+                alert('Квартира уже занята, выберите другую!');
+                cleaner.toCleanActive( floor, 'floor_active' );
+                cleaner.toCleanActive( houseWindows, 'window_active' );
 
-            popup.classList.add('popup_visible');
-            form.classList.add('hidden');
-            switchTheme.classList.add('hidden');
+            } else {
+                toInfoPopup.addInfo(element);
+                
+                popup.classList.add('popup_visible');
+                form.classList.add('hidden');
+                switchTheme.classList.add('hidden');
+            }
+
+            
             
         } else {
             popup.classList.remove('popup_visible');

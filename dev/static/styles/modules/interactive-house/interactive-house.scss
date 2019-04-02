@@ -269,5 +269,8 @@
 }
 
 .filter_none {
-    background: red !important;
+    background: #B4DCED !important;
+}
+ #switch:checked ~ .house  .filter_none {
+    background: #F8BCCA !important;
 }
